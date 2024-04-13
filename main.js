@@ -57,7 +57,7 @@ function shuffleArray(array) {
 }
 
 async function animateText(text, element) {
-    const delay = 100;
+    const delay = 50;
 
     for (let i = 0; i < text.length; i++) {
         await sleep(delay);
