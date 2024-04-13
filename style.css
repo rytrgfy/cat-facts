@@ -5,7 +5,7 @@
 
 body {
     position: relative;
-    background-color: rgb(194, 154, 34);
+    background-color: rgb(222, 237, 106);
     ;
 }
 
@@ -81,7 +81,7 @@ img {
 @media (min-width: 768px) {
     body {
         position: relative;
-        background-color: rgb(194, 154, 34);
+        background-color: rgb(222, 237, 106);
     }
     h1 {
         text-align: center;
