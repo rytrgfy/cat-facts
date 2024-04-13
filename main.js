@@ -2,6 +2,11 @@ let btn = document.querySelector("#button");
 let input = document.querySelector("#inputs-item");
 let factContainer = document.querySelector("#fact-container");
 
+document.addEventListener('contextmenu', function(event) {
+    // Prevent the default right-click context menu
+    event.preventDefault();
+}), false;
+
 btn.addEventListener("click", async() => {
     if (input.value == "") {
         alert("Please enter something!");
