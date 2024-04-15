@@ -1,70 +1,58 @@
-let btn = document.querySelector("#button");
-let input = document.querySelector("#inputs-item");
-let factContainer = document.querySelector("#fact-container");
-
-document.addEventListener('contextmenu', function(event) {
-    event.preventDefault();
-});
-
-btn.addEventListener("click", async() => {
-    if (input.value === "") {
-        alert("Please enter a number!");
-        return;
+function _0x4291(_0x2961ed, _0x4ae09e) { const _0x3e054a = _0x3e05(); return _0x4291 = function(_0x4291f8, _0x42bfe5) { _0x4291f8 = _0x4291f8 - 0x11b; let _0x4ce766 = _0x3e054a[_0x4291f8]; return _0x4ce766; }, _0x4291(_0x2961ed, _0x4ae09e); }
+const _0x347e79 = _0x4291;
+(function(_0x581925, _0xdc982b) {
+    const _0x52a2f4 = _0x4291,
+        _0x39020a = _0x581925();
+    while (!![]) {
+        try {
+            const _0xe78585 = -parseInt(_0x52a2f4(0x13e)) / 0x1 + parseInt(_0x52a2f4(0x13b)) / 0x2 + parseInt(_0x52a2f4(0x12b)) / 0x3 * (-parseInt(_0x52a2f4(0x11f)) / 0x4) + -parseInt(_0x52a2f4(0x127)) / 0x5 * (parseInt(_0x52a2f4(0x13a)) / 0x6) + parseInt(_0x52a2f4(0x126)) / 0x7 + -parseInt(_0x52a2f4(0x121)) / 0x8 * (parseInt(_0x52a2f4(0x123)) / 0x9) + parseInt(_0x52a2f4(0x139)) / 0xa * (parseInt(_0x52a2f4(0x129)) / 0xb);
+            if (_0xe78585 === _0xdc982b) break;
+            else _0x39020a['push'](_0x39020a['shift']());
+        } catch (_0x45aae7) { _0x39020a['push'](_0x39020a['shift']()); }
     }
-
-    let numberOfFacts = parseInt(input.value);
-
-    if (isNaN(numberOfFacts) || numberOfFacts <= 0) {
-        alert("Please enter a valid positive number!");
-        return;
-    }
-
+}(_0x3e05, 0xa878b));
+let btn = document[_0x347e79(0x136)](_0x347e79(0x12e)),
+    input = document[_0x347e79(0x136)](_0x347e79(0x11e)),
+    factContainer = document[_0x347e79(0x136)](_0x347e79(0x12c));
+document['addEventListener'](_0x347e79(0x125), function(_0x5babb7) {
+    const _0x1fdb43 = _0x347e79;
+    _0x5babb7[_0x1fdb43(0x131)]();
+}), btn['addEventListener']('click', async() => {
+    const _0x248703 = _0x347e79;
+    if (input[_0x248703(0x11c)] === '') { alert(_0x248703(0x13d)); return; }
+    let _0x2445a6 = parseInt(input[_0x248703(0x11c)]);
+    if (isNaN(_0x2445a6) || _0x2445a6 <= 0x0) { alert('Please\x20enter\x20a\x20valid\x20positive\x20number!'); return; }
     try {
-        let response = await fetch(`https://catfact.ninja/facts?limit=${numberOfFacts}`);
-
-        if (!response.ok) {
-            throw new Error("Failed to fetch cat facts");
-        }
-
-        let data = await response.json();
-
-        factContainer.innerHTML = "";
-
-        shuffleArray(data.data);
-
-        let ulElement = document.createElement("ul");
-        ulElement.classList.add("decimal-list");
-
-        data.data.forEach((fact, index) => {
-            let liElement = document.createElement("li");
-            ulElement.appendChild(liElement);
-            factContainer.appendChild(ulElement);
-
-            animateText(fact.fact, liElement);
+        let _0xfb4601 = await fetch(_0x248703(0x12d) + _0x2445a6);
+        if (!_0xfb4601['ok']) throw new Error('Failed\x20to\x20fetch\x20cat\x20facts');
+        let _0x47a846 = await _0xfb4601[_0x248703(0x134)]();
+        factContainer[_0x248703(0x137)] = '', shuffleArray(_0x47a846[_0x248703(0x11b)]);
+        let _0x5c4cb4 = document[_0x248703(0x11d)]('ul');
+        _0x5c4cb4[_0x248703(0x120)][_0x248703(0x124)](_0x248703(0x135)), _0x47a846[_0x248703(0x11b)][_0x248703(0x13c)]((_0x1ee9db, _0x2e0951) => {
+            const _0x4b44c3 = _0x248703;
+            let _0x4031f5 = document[_0x4b44c3(0x11d)]('li');
+            _0x5c4cb4[_0x4b44c3(0x130)](_0x4031f5), factContainer[_0x4b44c3(0x130)](_0x5c4cb4), animateText(_0x1ee9db['fact'], _0x4031f5);
         });
-
-    } catch (error) {
-        console.error("Error fetching cat facts:", error);
-        alert("Failed to fetch cat facts. Please try again later.");
-    }
+    } catch (_0x409ce9) { console['error'](_0x248703(0x12f), _0x409ce9), alert(_0x248703(0x132)); }
 });
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+function shuffleArray(_0x4c81d4) {
+    const _0x54ab39 = _0x347e79;
+    for (let _0x30ec52 = _0x4c81d4[_0x54ab39(0x12a)] - 0x1; _0x30ec52 > 0x0; _0x30ec52--) {
+        const _0x591892 = Math[_0x54ab39(0x138)](Math[_0x54ab39(0x128)]() * (_0x30ec52 + 0x1));
+        [_0x4c81d4[_0x30ec52], _0x4c81d4[_0x591892]] = [_0x4c81d4[_0x591892], _0x4c81d4[_0x30ec52]];
     }
 }
 
-async function animateText(text, element) {
-    const delay = 50;
-
-    for (let i = 0; i < text.length; i++) {
-        await sleep(delay);
-        element.textContent += text.charAt(i);
-    }
+function _0x3e05() {
+    const _0x922332 = ['6TMsYzS', '524886zycYmL', 'forEach', 'Please\x20enter\x20a\x20number!', '1187540IXuCgp', 'data', 'value', 'createElement', '#inputs-item', '4zYzVBI', 'classList', '7752PrSeHZ', 'textContent', '1872bGRaKK', 'add', 'contextmenu', '8078406EzZDsS', '1628355QGzoFS', 'random', '16740867FkKRla', 'length', '1600728UNGmgL', '#fact-container', 'https://catfact.ninja/facts?limit=', '#button', 'Error\x20fetching\x20cat\x20facts:', 'appendChild', 'preventDefault', 'Failed\x20to\x20fetch\x20cat\x20facts.\x20Please\x20try\x20again\x20later.', 'charAt', 'json', 'decimal-list', 'querySelector', 'innerHTML', 'floor', '10UJbKve'];
+    _0x3e05 = function() { return _0x922332; };
+    return _0x3e05();
+}
+async function animateText(_0x4c5bd1, _0x24b095) {
+    const _0x47323c = _0x347e79,
+        _0xea32aa = 0x32;
+    for (let _0x4f40b = 0x0; _0x4f40b < _0x4c5bd1['length']; _0x4f40b++) { await sleep(_0xea32aa), _0x24b095[_0x47323c(0x122)] += _0x4c5bd1[_0x47323c(0x133)](_0x4f40b); }
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+function sleep(_0x33c163) { return new Promise(_0x2cfdf0 => setTimeout(_0x2cfdf0, _0x33c163)); }
