@@ -14,7 +14,14 @@ h1 {
     color: aliceblue;
 }
 
-.c {
+main {
+    /* display: grid; */
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
     position: relative;
     /* max-width: 20%; */
     display: block;
@@ -35,11 +42,14 @@ h1 {
 }
 
 #button {
+    position: relative;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
     margin-top: 7%;
     background-color: #8DECB4;
     color: 141E46;
     max-width: 20% !important;
-    /* float: right; */
     cursor: pointer;
     max-height: 15%;
 }
